@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="#" alt="Logo">
+        <div class="username">
+            <p>Welcome, John Doe</p>
+            <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Rented Cars</a></li>
+                <li><button id="logout">Log out</button></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main-page">
+        <div class="filter">
+            <div class="filter-container">
+                <span class="fitler-item">
+                    <label for="company">Company:</label>
+                    <select id="company" name="company">
+                        <option value="">All</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                    </select>
+                </span>
+                <span class="fitler-item">
+                    <label for="model">Model:</label>
+                    <select id="model" name="model">
+                        <option value="">All</option>
+                        <option value="camry">Camry</option>
+                        <option value="civic">Civic</option>
+                    </select>
+                </span>
+                <span class="fitler-item">
+                    <label for="year">Year:</label>
+                    <span class="year-range">
+                        <input type="number" id="year_min" name="year_min" min="2023" max="2025" placeholder="Min Year">
+                        <span>-</span>
+                        <input type="number" id="year_max" name="year_max" min="2023" max="2025" placeholder="Max Year">
+                    </span>
+                </span>
+                <span class="fitler-item">
+                    <label for="price">Price:</label>
+                    <span class="price-range">
+                        <input type="number" id="year_min" name="year_min" min="2023" max="2025" placeholder="Min Year">
+                        <span>-</span>
+                        <input type="number" id="year_max" name="year_max" min="2023" max="2025" placeholder="Max Year">
+                    </span>
+                </span>
+                <button type="button" class="filter-button">Filter Results</button>
+            </div>
+        </div>
+        <div class="card-list"><!-- the ordering of the cards of cars  -->
+        </div>
+</body>
+
+</html>

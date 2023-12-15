@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="#" alt="Logo">
+        <div class="username">
+            <p>Welcome, John Doe</p>
+            <ul class="dropdown-menu">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="rented_cars.html">Rented Cars</a></li>
+                <li><button id="logout">Log out</button></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main-page">
+        <div class="filter">
+            <div class="filter-container">
+                <span class="fitler-item">
+                    <label for="company">Company:</label>
+                    <select id="company" name="company">
+                        <option value="">All</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                    </select>
+                </span>
+                <span class="fitler-item">
+                    <label for="model">Model:</label>
+                    <select id="model" name="model">
+                        <option value="">All</option>
+                        <option value="camry">Camry</option>
+                        <option value="civic">Civic</option>
+                    </select>
+                </span>
+                <span class="fitler-item">
+                    <label for="year">Year:</label>
+                    <span class="year-range">
+                        <input type="number" id="year_min" name="year_min" min="2023" max="2025" placeholder="Min Year">
+                        <span>-</span>
+                        <input type="number" id="year_max" name="year_max" min="2023" max="2025" placeholder="Max Year">
+                    </span>
+                </span>
+                <span class="fitler-item">
+                    <label for="price">Price:</label>
+                    <span class="price-range">
+                        <input type="number" id="year_min" name="year_min" min="2023" max="2025" placeholder="Min Year">
+                        <span>-</span>
+                        <input type="number" id="year_max" name="year_max" min="2023" max="2025" placeholder="Max Year">
+                    </span>
+                </span>
+                <button type="button" class="filter-button">Filter Results</button>
+            </div>
+        </div>
+        <div class="card-list"><!-- the ordering of the cards of cars  -->
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/png-hd-of-car-audi-png-hd-png-image-2505.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/Car.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/car-png-car-png-file-png-image-1312.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/car-png-car-png-file-png-image-1312.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/car-png-car-png-file-png-image-1312.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/car-png-car-png-file-png-image-1312.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/Car.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/Car.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image-wrapper">
+                        <img src="../pictures/Car.png" class="card-image">
+                        <div class="faded-line-horizontal"></div>
+                    </div>
+                    <div class="card-details">
+                        <h1 class="model">M8 Coupe</h1>
+                        <h3 class="company">BMW • 2023</h3>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="price">250$/month</p>
+                        <div class="vertical-line"></div>
+                        <div class="cart-button" id="cart-button" onclick="addToCart()"><i
+                                class="fa-solid fa-cart-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+</html>
